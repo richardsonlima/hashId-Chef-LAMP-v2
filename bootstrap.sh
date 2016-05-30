@@ -24,7 +24,7 @@ wget http://github.com/opscode/chef-repo/tarball/master
 tar -zxvf master
 sudo mkdir -p /opt/chef-repo
 sudo mv chef-chef-repo-*/ /opt/chef-repo/
-sudo mkdir /opt/chef-repo/.chef &&
+sudo mkdir /opt/chef-repo/.chef && sudo mkdir /opt/chef-repo/cookbooks 
 echo "cookbook_path [ '/opt/chef-repo/cookbooks' ]" > /opt/chef-repo/.chef/knife.rb
 echo -e "\033[1;34m [+] Creating PHPAPP cookbooks \033[m";
 cd /opt/chef-repo/cookbooks/ && sudo knife cookbook create phpapp
